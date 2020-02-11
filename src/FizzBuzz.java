@@ -2,27 +2,15 @@
 public class FizzBuzz {
 
 	String generarUno(Integer n){
-		
-		String str;
-		
-		if (isModThree(n) && isModFive(n)) {
-			str = "FizzBuzz";                    
-		}
-		else { 
-			if(isModThree(n)) {
-				str = "Fizz";
-			}
-			else { 
-				if(isModFive(n)) {
-					str = "Buzz";
-				}
-				else {
-					str = n.toString();
-				}
-			}
-		}
-		
-		return str;
+		return 
+			// Es multiplo de 3 y 5 							 		
+			(isModThree(n) && isModFive(n)) ? "FizzBuzz" : 
+			// Es multiplo de 3			
+			(isModThree(n)) ? "Fizz" : 
+			// Es multiplo de 5
+			(isModFive(n)) ? "Buzz" : 
+			// Devuelve numero
+			n.toString();
 	}
 	
 	void generarMuchos(int n) {
