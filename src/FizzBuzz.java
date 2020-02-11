@@ -5,22 +5,23 @@ public class FizzBuzz {
 		
 		String str;
 		
-		if (isModThree(n) && isModFive(n))
-		{
+		if (isModThree(n) && isModFive(n)) {
 			str = "FizzBuzz";                    
 		}
-		else 
-			if(isModThree(n))
-			{
+		else { 
+			if(isModThree(n)) {
 				str = "Fizz";
 			}
-			else 
-				if(isModFive(n))
-				{
+			else { 
+				if(isModFive(n)) {
 					str = "Buzz";
 				}
-				else
+				else {
 					str = n.toString();
+				}
+			}
+		}
+		
 		return str;
 	}
 	
