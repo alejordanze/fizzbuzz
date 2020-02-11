@@ -2,18 +2,20 @@
 public class FizzBuzz {
 
 	String generarUno(Integer n){
+		
 		String str;
-		if (n % 3 == 0 && n % 5 == 0)
+		
+		if (isModThree(n) && isModFive(n))
 		{
 			str = "FizzBuzz";                    
 		}
 		else 
-			if(n % 3 == 0)
+			if(isModThree(n))
 			{
 				str = "Fizz";
 			}
 			else 
-				if(n % 5 == 0)
+				if(isModFive(n))
 				{
 					str = "Buzz";
 				}
@@ -29,4 +31,11 @@ public class FizzBuzz {
 		}
 	}
 	
+	boolean isModThree(int n) {
+		return n % 3 == 0;
+	}
+	
+	boolean isModFive(int n) {
+		return n % 5 == 0;
+	}
 }
