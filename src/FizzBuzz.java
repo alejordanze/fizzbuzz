@@ -1,29 +1,31 @@
 
 public class FizzBuzz {
 
-	void generarUno(Integer n){
+	String generarUno(Integer n){
+		String str;
 		if (n % 3 == 0 && n % 5 == 0)
 		{
-			System.out.println("FizzBuzz");                    
+			str = "FizzBuzz";                    
 		}
 		else 
 			if(n % 3 == 0)
 			{
-				System.out.println("Fizz");
+				str = "Fizz";
 			}
 			else 
 				if(n % 5 == 0)
 				{
-					System.out.println("Buzz");
+					str = "Buzz";
 				}
 				else
-					System.out.println(n);
+					str = n.toString();
+		return str;
 	}
 	
-	void generarMuchos() {
-		for(int i = 0; i < 100; i++)
+	void generarMuchos(int n) {
+		for(int i = 0; i < n; i++)
 		{
-			generarUno(i);
+			System.out.println(generarUno(i));
 		}
 	}
 	
